@@ -74,10 +74,6 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-//        $pattern = "#^\+380\d{3}\d{2}\d{2}\d{2}$#";
-//        if(preg_match($pattern, "+380635290289")) echo "Валиден";
-//        else echo "Не валиден";
-//        dd();
         return $this->render('index');
     }
 

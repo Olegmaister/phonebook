@@ -82,6 +82,7 @@ class PhoneBookController extends Controller
         $form = new PhoneBookForm();
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
             try {
+                dd($form);
                 $phoneBook = $this->service->create($form);
                 Yii::$app->session->setFlash('success', 'создали');
                 return $this->redirect(['view', 'id' => $phoneBook->id]);

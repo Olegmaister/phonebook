@@ -18,7 +18,7 @@ class m210316_151909_create_phones_book_table extends Migration
             'first_name' => $this->string(32)->notNull(),
             'last_name' => $this->string(32)->null(),
             'email' => $this->string(100)->null(),
-            'date_birth' => $this->string(100)->notNull(),
+            'date_birth' => $this->date()->notNull(),
             'phone' => $this->string(50)
         ],$tableOptions);
     }

@@ -23,7 +23,6 @@ class PhoneBookForm extends Model
 
     public function __construct(PhoneBook $phoneBook = null,$config = [])
     {
-
         if($phoneBook){
             $this->firstName = $phoneBook->first_name;
             $this->lastName = $phoneBook->last_name;
@@ -53,7 +52,7 @@ class PhoneBookForm extends Model
 
         if(($currentYear-$year) < self::REQUIRED_AGE)
         {
-            $this->addError($attribute, 'Необходимый возраст '.self::REQUIRED_AGE);
+            $this->addError($attribute, 'required age '.self::REQUIRED_AGE);
         }
 
     }

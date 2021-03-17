@@ -13,7 +13,7 @@ class PhoneBookRepository
     public function save(PhoneBook $phoneBook) : void
     {
         if(!$phoneBook->save()){
-            throw new \DomainException('saving error');
+            throw new \RuntimeException('saving error');
         }
     }
 

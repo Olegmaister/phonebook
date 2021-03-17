@@ -67,7 +67,7 @@ class PhoneBookSearch extends PhoneBook
             ->andFilterWhere(['like', 'last_name', $this->last_name])
             ->andFilterWhere(['like', 'email', $this->email])
             ->andFilterWhere(['like', 'date_birth', $this->date_birth]);
-        
+
         $query->andFilterWhere(['like', 'phones.number', $this->phone]);
 
         return $dataProvider;

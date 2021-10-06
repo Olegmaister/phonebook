@@ -74,6 +74,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $arr = [123];
         return $this->render('index');
     }
 

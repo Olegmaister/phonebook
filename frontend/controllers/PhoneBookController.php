@@ -53,6 +53,14 @@ class PhoneBookController extends Controller
         $searchModel = new PhoneBookSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+
+        $resArray = [];
+        $arrSter = [123,234,4565,567];
+        foreach ($arrSter as $item) {
+            $resArray[] = $item;
+        }
+
+
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
